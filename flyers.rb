@@ -10,7 +10,7 @@ require 'sass'
 
 # index
 get '/' do
-  haml :index, :encoding => 'utf-8'
+  haml :index
 end
 
 get '/by_name' do
