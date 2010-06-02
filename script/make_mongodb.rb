@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 require 'mongo'
 
 m = Mongo::Connection.new
