@@ -3,40 +3,14 @@ require 'RedCloth'
 
 border_style = <<EOT
 <style type="text/css">
-  body {
-    padding: 25px;
-    font-size: .9em;
-    font-family: verdana;
-  }
-  
   table {
     border-collapse: collapse;
     border: solid 1px black;
   }
   
   td, th {
-    padding: 4px;
     border: solid 1px black;
   }
-  
-  h1 { font-size: 140%; }
-</style>
-
-EOT
-
-no_border_style = <<EOT
-<style type="text/css">
-  body {
-    padding: 25px;
-    font-size: .9em;
-    font-family: verdana;
-  }
-  
-  td, th {
-    padding: 4px;
-  }
-  
-  h1 { font-size: 140%; }
 </style>
 
 EOT
@@ -64,7 +38,7 @@ input.each_line do |line|
   names[player_name][:numbers] << info[0].to_i
 end
 
-by_num = no_border_style + "h1. Flyers By Jersey Number\n\n"
+by_num = "h1. Flyers By Jersey Number\n\n"
 numbers.sort.each do |number, player_names| 
   by_num << "h2. #{number}\n\n"
   player_names.each { |name| by_num << "#{name}" }
