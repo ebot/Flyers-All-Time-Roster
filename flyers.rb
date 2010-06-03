@@ -7,17 +7,22 @@ require 'mongo'
 
 include Mongo
 
-DB = Connection.new(ENV['DATABASE_URL'] || 'localhost').db('flyers')
-if ENV['DATABASE_USER'] && ENV['DATABASE_PASSWORD']
-  auth = DB.authenticate(ENV['DATABASE_USER'], ENV['DATABASE_PASSWORD'])
+
+if ENV['MONGOHQ_URL']
+  uri = URI.parse(ENV['MONGOHQ_URL'])
+  conn = Mongo::Connection.from_uri(ENV['MONGOHQ_URL'])
+  db = conn.db(uri.path.gsub(/^\//, ''))
+else
+  db = Connection.new(ENV['DATABASE_URL'] || 'localhost').db('flyers')
 end
+
 
 
 # index
 get '/' do
   @jersey_numbers = {}
   (0..100).each do |jersey_number|
-    players = DB['players'].find('numbers' => jersey_number)
+    players = db['players'].find('numbers' => jersey_number)
     if players.count > 0
       @jersey_numbers[jersey_number] = players
     end  
@@ -26,7 +31,7 @@ get '/' do
 end
 
 get '/by_name' do
-  @players = DB['players'].find()
+  @players = db['players'].find()
   haml :names
 end
 
