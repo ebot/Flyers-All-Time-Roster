@@ -1,0 +1,14 @@
+h1. Flyers All Time Roster
+
+This "Sinatra":http://www.sinatrarb.com/ web site was created to solve the answer to who wore number X for the flyers.  It was also a chance to test out the new "mongodb":http://mongodb.org support in "heroku":http://heroku.com with "MongoHQ":http://blog.heroku.com/archives/2010/4/30/mongohq_add_on_public_beta/.
+
+The process is amazingly simple thanks to heroku and the "Mongo Sync plugin":http://github.com/pedro/heroku-mongo-sync
+
+h2. Usage
+
+# Pull the git repo:  @git clone git://github.com/ebot/Flyers-All-Time-Roster.git@
+# Install the heroku gem:  @gem intstall heroku@
+# Install the mongo sync plugin:  @heroku plugins:install http://github.com/pedro/heroku-mongo-sync.git@
+# Populate your local mongodb with the script/make_mongodb.rb file.
+# Create a heroku app and push to your heroku repo.
+# Push your local mongodb to heroku with @heroku mongo:push@.
