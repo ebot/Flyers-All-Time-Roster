@@ -1,12 +1,10 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'sass'
 require 'mongo'
 
 include Mongo
-
 
 if ENV['MONGOHQ_URL']
   uri = URI.parse(ENV['MONGOHQ_URL'])
@@ -16,9 +14,6 @@ else
   db = Connection.new(ENV['DATABASE_URL'] || 'localhost').db('flyers')
 end
 
-
-
-# index
 get '/' do
   @jersey_numbers = {}
   (0..100).each do |jersey_number|
