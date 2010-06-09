@@ -1,6 +1,6 @@
 h1. Flyers All Time Roster
 
-This "Sinatra":http://www.sinatrarb.com/ web site was created to solve the answer to who wore number X for the flyers.  It was also a chance to test out the new "mongodb":http://mongodb.org support in "heroku":http://heroku.com with "MongoHQ":http://blog.heroku.com/archives/2010/4/30/mongohq_add_on_public_beta/.
+This "Sinatra":http://www.sinatrarb.com/ web site was created to solve the answer to who wore number X for the flyers.  It was also a chance to test out the new "mongodb":http://mongodb.org support in "heroku":http://heroku.com with "MongoHQ":http://blog.heroku.com/archives/2010/4/30/mongohq_add_on_public_beta/ and mess around with "cucumber":cukes.info tests.
 
 The process is amazingly simple thanks to heroku and the "Mongo Sync plugin":http://github.com/pedro/heroku-mongo-sync
 
