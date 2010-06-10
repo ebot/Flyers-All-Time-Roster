@@ -2,14 +2,14 @@
 !foreground = white
 
 body
-  padding: 25px
-  font-size: .9em
+  padding: 5px
+  font-size: .7em
   font-family: verdana
   :background-color = !background
   :color = !foreground
 
 table
-  margin-left: 20px
+  margin-left: 3px
 
 h1
   font-size: 150%
@@ -21,7 +21,7 @@ h3
   font-size: 120%
 
 td, th
-  padding: 4px
+  padding: 2px
 
 a
   color: #B85B19
@@ -48,6 +48,3 @@ a
   :border-top = "solid 1px " + !foreground
   margin-top: 80%
   padding-top: 80%
-
-.traditional_table td, th
-  padding: 5px
