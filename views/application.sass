@@ -1,7 +1,12 @@
+!background = black
+!foreground = white
+
 body
   padding: 25px
   font-size: .9em
   font-family: verdana
+  :background-color = !background
+  :color = !foreground
 
 table
   margin-left: 20px
@@ -23,11 +28,11 @@ a
   text-decoration: none
 
   &:hover
-    color: Black
+    :color = !foreground
     text-decoration: none
 
 #header
-  border-bottom: solid 1px black
+  :border-bottom = "solid 1px " + !foreground
   padding-bottom: 10px
   span
     padding: 8px
@@ -40,6 +45,9 @@ a
 
 #footer
   text-align: center
-  border-top: solid 1px black
+  :border-top = "solid 1px " + !foreground
   margin-top: 8px
   padding-top: 8px
+
+.traditional_table td, th
+  padding: 5px
