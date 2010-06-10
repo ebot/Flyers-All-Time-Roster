@@ -35,3 +35,8 @@ get '/stylesheets/application.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :application
 end
+
+get '/stylesheets/iphone.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :iphone
+end
