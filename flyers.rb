@@ -2,6 +2,7 @@
 require 'sinatra'
 require 'haml'
 require 'sass'
+require 'uri'
 require 'mongo'
 
 include Mongo
