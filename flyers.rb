@@ -33,10 +33,10 @@ end
 # SASS stylesheets
 get '/stylesheets/application.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :application
+  scss :application
 end
 
 get '/stylesheets/iphone.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :iphone
+  scss :iphone
 end

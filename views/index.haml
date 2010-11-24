@@ -1,9 +1,14 @@
 %h1 By Jersey Number
--@jersey_numbers.sort.each do |jersey_number, players|
-  %h2= jersey_number
-  %table
-    - players.each do |player|
-      %tr
-        %th{:style => 'text-align: left'}= player['name']
-        %td= player['position']
-        %td= player['years']
+.numbers
+  -@jersey_numbers.sort.each do |jersey_number, players|
+    %h2= jersey_number
+    %a{ :href => "\##{jersey_number}" }
+    .jersey_numbers
+      %table
+        - players.each do |player|
+          %tr
+            %th{:style => 'text-align: left'}= player['name']
+            %td= player['position']
+            %td= player['years']
+:javascript
+  $.localScroll();
