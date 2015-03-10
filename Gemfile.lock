@@ -1,15 +1,19 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    bson (1.1.2)
-    haml (3.0.24)
-    mongo (1.1.2)
-      bson (>= 1.1.1)
-    rack (1.2.1)
+    bson (1.12.0)
+    haml (4.0.6)
+      tilt
+    mongo (1.12.0)
+      bson (= 1.12.0)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
+    rack (1.6.0)
+    sass (3.4.13)
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.1)
-    tilt (1.1)
+    tilt (1.4.1)
 
 PLATFORMS
   ruby
@@ -17,4 +21,6 @@ PLATFORMS
 DEPENDENCIES
   haml
   mongo
+  puma
+  sass
   sinatra (= 1.1)
